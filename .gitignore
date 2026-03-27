@@ -31,5 +31,9 @@ paper/
 data/scripts/ai_scoring_v2.py
 data/scripts/multi_round_scoring.py
 
+# Internal project management
+data/PROJECT_SUMMARY.md
+data/FINAL_STATUS.md
+
 # Deprecated data
 data/raw_deprecated/
