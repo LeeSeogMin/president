@@ -1,6 +1,11 @@
 # Environment variables
 .env
 .env.local
+.env.example
+CLAUDE.md
+context.md
+plan.md
+research.md
 
 # Python
 __pycache__/
@@ -15,3 +20,16 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Claude Code
+.claude/
+
+# Paper drafts (논문 원고 — 비공개)
+paper/
+
+# Data collection scripts (API 키 의존, 수집용)
+data/scripts/ai_scoring_v2.py
+data/scripts/multi_round_scoring.py
+
+# Deprecated data
+data/raw_deprecated/
