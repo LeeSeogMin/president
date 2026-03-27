@@ -281,7 +281,7 @@ def call_anthropic(system: str, user: str) -> str:
     client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
     resp = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=4096,
+        max_tokens=16384,
         temperature=0.2,
         system=system,
         messages=[{"role": "user", "content": user}],
@@ -290,84 +290,58 @@ def call_anthropic(system: str, user: str) -> str:
 
 
 def call_gemini(system: str, user: str) -> str:
-    """Call Google Gemini API."""
-    import google.generativeai as genai
-    genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
-
-    # Try multiple Gemini model names
-    for model_name in ["gemini-2.5-flash-preview-05-20", "gemini-2.0-flash", "gemini-2.0-flash-001"]:
+    """Call Google Gemini API via REST (same pattern as ai_scoring_v2.py)."""
+    import requests as _requests
+    api_key = os.getenv("GEMINI_API_KEY")
+    for model_name in ["gemini-3-flash-preview", "gemini-2.5-flash-preview-04-17"]:
         try:
-            model = genai.GenerativeModel(
-                model_name=model_name,
-                system_instruction=system,
-                generation_config=genai.GenerationConfig(temperature=0.2, max_output_tokens=4096),
+            resp = _requests.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent",
+                params={"key": api_key},
+                json={
+                    "system_instruction": {"parts": [{"text": system}]},
+                    "contents": [{"parts": [{"text": user}]}],
+                    "generationConfig": {"temperature": 0.2, "maxOutputTokens": 16384},
+                },
+                timeout=180,
             )
-            resp = model.generate_content(user)
-            return resp.text
+            resp.raise_for_status()
+            data = resp.json()
+            candidates = data.get("candidates", [])
+            if not candidates:
+                raise ValueError(f"Gemini no candidates: {data}")
+            parts = candidates[0].get("content", {}).get("parts", [])
+            return parts[0].get("text", "") if parts else ""
         except Exception as e:
-            err_str = str(e)
-            if "429" in err_str or "quota" in err_str.lower():
-                # Rate limit - wait and retry with same model
-                print(f"  Rate limited on {model_name}, waiting 30s...")
-                time.sleep(30)
-                try:
-                    resp = model.generate_content(user)
-                    return resp.text
-                except Exception:
-                    pass
-            if model_name != "gemini-2.0-flash-001":
-                print(f"  {model_name} failed ({e}), trying next model...")
+            if model_name != "gemini-2.5-flash-preview-04-17":
+                print(f"  {model_name} failed ({e}), trying next...")
                 continue
             raise
 
 
 def call_clova(system: str, user: str) -> str:
-    """Call CLOVA HyperCLOVA HCX-007 via Chat Completions v3."""
-    import requests
-    base_url = os.getenv("CLOVA_STUDIO_BASE_URL", "https://clovastudio.stream.ntruss.com").rstrip("/")
+    """Call CLOVA HyperCLOVA HCX-007 via v3 (same pattern as ai_scoring_v2.py)."""
+    import requests as _requests
     api_key = os.getenv("CLOVA_STUDIO_API_KEY", "").strip()
-    ncp_access = os.getenv("NCP_ACCESS_KEY_ID", "").strip()
-    ncp_secret = os.getenv("NCP_SECRET_KEY", "").strip()
-
-    # Try both v3 and v1 endpoints
-    urls_to_try = [
-        f"{base_url}/v3/chat-completions/HCX-007",
-        f"{base_url}/testapp/v1/chat-completions/HCX-007",
-    ]
-    headers = {
-        "Content-Type": "application/json",
-        "Authorization": f"Bearer {api_key}",
-        "X-NCP-CLOVASTUDIO-API-KEY": api_key,
-        "X-NCP-APIGW-API-KEY-ID": ncp_access,
-        "X-NCP-APIGW-API-KEY": ncp_secret,
-    }
-    url = urls_to_try[0]  # default
-    body = {
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
-        "temperature": 0.2,
-        "maxTokens": 4096,
-        "topP": 0.8,
-    }
-    last_error = None
-    for url in urls_to_try:
-        try:
-            resp = requests.post(url, headers=headers, json=body, timeout=120)
-            resp.raise_for_status()
-            data = resp.json()
-            # CLOVA response format
-            if "result" in data:
-                return data["result"]["message"]["content"]
-            elif "message" in data:
-                return data["message"]["content"]
-            else:
-                return json.dumps(data, ensure_ascii=False)
-        except Exception as e:
-            last_error = e
-            continue
-    raise last_error
+    model = os.getenv("CLOVA_STUDIO_MODEL", "HCX-007")
+    base_url = (os.getenv("CLOVA_STUDIO_BASE_URL") or "https://clovastudio.stream.ntruss.com").rstrip("/")
+    resp = _requests.post(
+        f"{base_url}/v3/chat-completions/{model}",
+        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+        json={
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            "temperature": 0.2,
+        },
+        timeout=180,
+    )
+    resp.raise_for_status()
+    data = resp.json()
+    result = data.get("result", data)
+    message = result.get("message", {})
+    return message.get("content", "")
 
 
 # Model registry
