@@ -1,0 +1,357 @@
+{
+  "_metadata": {
+    "timestamp": "2026-03-27 09:19:49",
+    "label_map": {
+      "노무현": "Zeta",
+      "이명박": "Beta",
+      "박근혜": "Delta",
+      "문재인": "Alpha",
+      "윤석열": "Epsilon",
+      "이재명": "Gamma"
+    },
+    "n_borderline_cases": 46,
+    "n_blind_items": 46,
+    "rounds": 3,
+    "temperature": 0.2
+  },
+  "_blind_items": [
+    {
+      "blind_id": "B01",
+      "original_id": "노무현-C1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "WGI GE.EST Δ+0.412 (0.790→1.202). 추세 예상 Δ = +0.104 (0.026×4년). 순기여 = +0.308. OECD 격차도 -0.471→-0.009로 대폭 축소. 추세 초과분(+0.308)은 대통령 기여(I)로 귀속."
+    },
+    {
+      "blind_id": "B02",
+      "original_id": "노무현-C2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "WGI Percentile Δ+8.73 (76.22→84.95). Percentile은 글로벌 추세 자동 통제. 8.73pp 상승은 다른 국가 대비 상대적 개선을 의미하므로 대통령 기여."
+    },
+    {
+      "blind_id": "B03",
+      "original_id": "노무현-C3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "EGDI Δ+0.1286, 순위 13→5. EGDI는 OSI(온라인서비스)·TII(인프라)·HCI(인적자본) 복합. OSI 급등(+0.37)은 전자정부 관련 법률 기반 서비스 확대(I 요소), TII/HCI는 글로벌 기술추세(T). 디트렌딩 불가(N=12)."
+    },
+    {
+      "blind_id": "B04",
+      "original_id": "노무현-E1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "국정과제 12대 과제, 적응적 도구 0.0%. 대통령이 직접 설정한 국정 어젠다. 적응적 도구 미채택은 당시 개념 부재의 시대적 한계도 반영."
+    },
+    {
+      "blind_id": "B05",
+      "original_id": "이명박-A1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "전자정부 관련 법률 전부개정 (해당연도, 표준프레임워크). 기존 법률의 전부개정으로 표준프레임워크 도입(제56조). 단순 승계가 아닌 체계 강화 의사결정. 다만 전자정부 확대 자체는 글로벌 추세와 동조."
+    },
+    {
+      "blind_id": "B06",
+      "original_id": "이명박-C1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I-",
+      "anonymized_description": "WGI GE.EST Δ+0.081 (0.994→1.075). 추세 예상 Δ = +0.130 (0.026×5년). 순기여 = -0.023 (추세 하회). OECD 격차: -0.225→-0.149, 소폭 개선이나 추세 이하. 추세 미달분은 I-(부정적 기여)."
+    },
+    {
+      "blind_id": "B07",
+      "original_id": "이명박-C2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "WGI Percentile Δ+2.38 (79.61→81.99). Percentile 소폭 상승은 글로벌 추세 범위 내. 다른 OECD 국가 대비 큰 차별화 없음."
+    },
+    {
+      "blind_id": "B08",
+      "original_id": "이명박-C3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "EGDI Δ+0.0966, 순위 6→1. OSI 만점(1.000) 달성은 전자정부 투자(I), TII 상승(+0.147)은 인프라 추세(T). 1위 달성 자체는 의도적 투자 결과이나 디트렌딩 불가."
+    },
+    {
+      "blind_id": "B09",
+      "original_id": "이명박-E1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "국정과제 100개, 적응적 도구 0.0%. 대통령이 직접 설정한 국정 어젠다. 적응적 도구 미채택. 시대적 한계 요인도 존재."
+    },
+    {
+      "blind_id": "B10",
+      "original_id": "이명박-F4",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "INST D4=1 (전자정부 관련 법률 전부개정). 전자정부 관련 법률 전부개정(정부 Beta-A1)에 의한 디지털 거버넌스 강화. 점수 변동은 없으나(1→1) 체계 강화 기여."
+    },
+    {
+      "blind_id": "B11",
+      "original_id": "박근혜-A2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I (미완)",
+      "anonymized_description": "규제 유연화 지역 관련 법률 추진 → 국회 통과 실패. 정책 실험 법제화를 시도했으나 입법 실패. 의도(I)는 있었으나 결과 미달성. 제도적 효과 없음."
+    },
+    {
+      "blind_id": "B12",
+      "original_id": "박근혜-C1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I-",
+      "anonymized_description": "WGI GE.EST Δ+0.018 (1.003→1.021). 추세 예상 Δ = +0.104 (0.026×4년). 순기여 = -0.060 (추세 대폭 하회). OECD 격차: -0.229→-0.153, 소폭 개선이나 추세 기대치 크게 미달."
+    },
+    {
+      "blind_id": "B13",
+      "original_id": "박근혜-C2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "D",
+      "anonymized_description": "WGI Percentile Δ+0.38 (79.62→80.00). Percentile 거의 정체. 글로벌 대비 상대적 위치 개선 실패. OECD 평균 하락 속에서도 한국 percentile이 정체한 것은 거버넌스 역량 표류."
+    },
+    {
+      "blind_id": "B14",
+      "original_id": "박근혜-C3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I-",
+      "anonymized_description": "EGDI Δ-0.0547, 순위 1→3. 6개 정부 중 유일한 EGDI 하락. OSI(-0.034), TII(-0.082) 동반 하락. 정부 Beta 시기 1위에서 후퇴. 적극적 투자 실패."
+    },
+    {
+      "blind_id": "B15",
+      "original_id": "박근혜-E2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "적응적 도구 비율 0%→3.6% 증가. 데이터 기반 정책의 등장은 글로벌 디지털 전환 추세(T)와 대통령 선택(I) 혼합."
+    },
+    {
+      "blind_id": "B16",
+      "original_id": "박근혜-F2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I (미완)",
+      "anonymized_description": "INST D2=0 (입법 실패). 시도했으나 실패. 결과적 부재."
+    },
+    {
+      "blind_id": "B17",
+      "original_id": "박근혜-F3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "D",
+      "anonymized_description": "INST D3=1 (정부 개방·공유 이니셔티브 형식적 운영). 정부 개방·공유 이니셔티브을 표방했으나 실질은 공공데이터 개방(정보공개)에 한정. 시민 피드백 채널로서의 기능은 형식적. 제도 존재하나 실질 약화."
+    },
+    {
+      "blind_id": "B18",
+      "original_id": "문재인-A3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "전자정부 관련 법률 개정: 지능형 전자정부서비스 (제18조의2) 추가. 기존 법률의 의도적 개정으로 AI/지능화 조항 신설. 글로벌 AI 추세와 동조하나 입법 의사결정은 명확."
+    },
+    {
+      "blind_id": "B19",
+      "original_id": "문재인-C1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "WGI GE.EST Δ+0.337 (1.029→1.366). 추세 예상 Δ = +0.130 (0.026×5년). 순기여 = +0.233 (추세 대폭 초과). OECD 격차: -0.123→+0.285, 사상 최초 OECD 평균 추월. 추세 초과분은 대통령 기여."
+    },
+    {
+      "blind_id": "B20",
+      "original_id": "문재인-C2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "WGI Percentile Δ+9.05 (80.95→90.00). Percentile 9pp 상승은 글로벌 대비 상대적 대폭 개선. 6개 정부 중 최대 상승폭."
+    },
+    {
+      "blind_id": "B21",
+      "original_id": "문재인-C3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "EGDI Δ+0.0519, 순위 3→3 유지. EGDI 소폭 상승은 글로벌 디지털화 추세 내. 순위 변동 없음. TII(+0.118)는 인프라 추세, OSI 거의 정체."
+    },
+    {
+      "blind_id": "B22",
+      "original_id": "문재인-C4",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "DGI 해당연도 Pilot: 0.747, OECD 1위. DGI 첫 시행에서 1위 달성. 디지털 정부 역량이 OECD 최고 수준임을 입증. 다만 이전 정부 누적 투자(T) 효과도 포함."
+    },
+    {
+      "blind_id": "B23",
+      "original_id": "문재인-E1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "국정과제 100개, 적응적 도구 2.0%. 대통령이 직접 설정한 어젠다. 적응적 도구 2건(ICT/4차산업혁명). 정부 Delta 대비 비율 하락(3.6%→2.0%)이나 과제 수 차이(140→100) 고려 필요."
+    },
+    {
+      "blind_id": "B24",
+      "original_id": "문재인-F1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "INST D1=2 (승계 + 데이터 산업 관련 법률 보강). D1 기본 점수(2)는 정부 업무 평가 관련 기본 법률 승계(T). 데이터 산업 관련 법률 제27조 실태조사 추가는 보강(I). 점수 변동 없으나 질적 심화."
+    },
+    {
+      "blind_id": "B25",
+      "original_id": "문재인-F4",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "INST D4=1 (데이터 산업 관련 법률 + 전자정부 관련 법률 개정). 데이터 산업 관련 법률 제정 + 지능형 전자정부서비스 조항 추가. AI 관련 기본 법률 미제정으로 점수 1 유지이나, 질적 기반 구축."
+    },
+    {
+      "blind_id": "B26",
+      "original_id": "윤석열-A1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "AI 관련 기본 법률 공포 (해당연도.01.21, 시행 해당연도.01.22). 국회 통과 후 대통령 서명·공포. 입법 주도는 국회이나, 거부권 미행사로 공포에 서명한 것은 의도적 결정. 실질 시행은 정부 Gamma 정부."
+    },
+    {
+      "blind_id": "B27",
+      "original_id": "윤석열-A2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "대규모 안전사고 관련 특별법 (해당연도.05, 재의결 후 공포). 대통령이 거부권을 행사했으나 국회 재의결로 공포·시행. 거부권 행사 자체는 I-(부정적 의도)이나, 재의결로 결국 시행. 법 제정은 국회 주도."
+    },
+    {
+      "blind_id": "B28",
+      "original_id": "윤석열-B1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "안전사고참사 특별조사위원회 출범 . 대규모 안전사고 관련 특별법(정부 Epsilon-A2) 수반 조직이나, 법 시행까지 571일 소요. 위원회 출범 자체는 법적 의무 이행."
+    },
+    {
+      "blind_id": "B29",
+      "original_id": "윤석열-C1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "WGI GE.EST Δ+0.056 (1.349→1.405). 추세 예상 Δ = +0.026 (0.026×1년, 해당연도→해당연도만 가용). 순기여 = +0.030 (추세와 거의 일치). 2년치 데이터만 가용하여 판단 제한적."
+    },
+    {
+      "blind_id": "B30",
+      "original_id": "윤석열-C2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "WGI Percentile Δ+0.48 (90.09→90.57). Percentile 거의 정체(+0.48). 기존 수준 유지. 정부 Alpha 임기 성과의 관성적 지속."
+    },
+    {
+      "blind_id": "B31",
+      "original_id": "윤석열-C3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "EGDI Δ+0.0150, 순위 3→4. EGDI 소폭 상승이나 순위 1단계 하락. 글로벌 디지털화 추세 내 자연 변동."
+    },
+    {
+      "blind_id": "B32",
+      "original_id": "윤석열-C4",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "DGI 해당연도: 0.935, OECD 1위 유지. DGI 1위 유지(0.747→0.935)는 전임 정부 누적 투자(T)와 현 정부 운영(I) 혼합. Data-Driven 만점은 데이터 산업 관련 법률 등 기존 체계의 성숙 효과."
+    },
+    {
+      "blind_id": "B33",
+      "original_id": "윤석열-C5",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "DGI 해당연도: 0.95, OECD 1위 유지. 3회 연속 1위. 증가폭(+0.015)은 미미. OECD 평균 증가(+0.095)보다 작아 격차 축소 추세. 기존 체계의 관성적 유지."
+    },
+    {
+      "blind_id": "B34",
+      "original_id": "윤석열-E1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "국정과제 120개, 적응적 도구 10.0%. 대통령이 직접 설정한 어젠다. 적응적 도구 12건(데이터 기반 11, 반복수정 1)으로 전임 대비 대폭 증가. AI/디지털 시대 반영."
+    },
+    {
+      "blind_id": "B35",
+      "original_id": "윤석열-E2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "적응적 도구 비율 2.0%→10.0% 증가. 적응적 도구 증가의 일부는 글로벌 AI/디지털 전환 추세(T). 10%까지의 급증은 대통령의 어젠다 선택(I)도 기여."
+    },
+    {
+      "blind_id": "B36",
+      "original_id": "윤석열-F1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "INST D1=2 (승계 + 대규모 안전사고 관련 특별법 AAR 추가). D1 기본 점수(2)는 승계(T). 대규모 안전사고 관련 특별법 재발방지 권고(AAR)는 새 환류 채널 추가(I). 다만 법 제정은 국회 주도."
+    },
+    {
+      "blind_id": "B37",
+      "original_id": "윤석열-F4",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "INST D4=1 (AI 관련 기본 법률 공포만, 시행 미완). AI 관련 기본 법률 공포했으나 시행 전. 실질적 AI 거버넌스 운영 없음. 기존 디지털+데이터 수준 유지는 T."
+    },
+    {
+      "blind_id": "B38",
+      "original_id": "이재명-A1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "AI 관련 기본 법률 시행 + 하위법령 정비. 법률 자체는 21대~22대 국회 통과 + 정부 Epsilon 공포이나, 시행 시점의 하위법령 정비·위원회 구성·안전연구소 설치 등 실질적 운영 개시는 정부 Gamma 정부의 의도적 집행."
+    },
+    {
+      "blind_id": "B39",
+      "original_id": "이재명-A2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "규제 유연화 특구 관련 법률 개정 . 기존 법률의 최신 개정. 단순 승계가 아닌 개정 의사결정."
+    },
+    {
+      "blind_id": "B40",
+      "original_id": "이재명-A3",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "정부 업무 평가 관련 기본 법률 개정 . 기존 법률의 최신 개정."
+    },
+    {
+      "blind_id": "B41",
+      "original_id": "이재명-A4",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "전자정부 관련 법률 시행 (해당연도.07.08, 공포 해당연도.01.07). 정부 Epsilon 정부 기간 공포된 개정안의 시행. 정부 Gamma 정부 자체 개정 아님."
+    },
+    {
+      "blind_id": "B42",
+      "original_id": "이재명-D1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "경기도 재난기본소득 (지사 시절, 참고). 대규모 감염병 위기 대응으로 광역단체장 최초 재난소득 발표(심각 격상 후 30일). 대통령직이 아닌 지사 시절이므로 참고 사항."
+    },
+    {
+      "blind_id": "B43",
+      "original_id": "이재명-E1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "I",
+      "anonymized_description": "국정과제 123개, 적응적 도구 10.6%. 대통령이 직접 설정한 어젠다. 적응적 도구 13건(AI 7, 디지털 4, AI/디지털 1, 샌드박스 1). AI 관련 과제 비중 최대."
+    },
+    {
+      "blind_id": "B44",
+      "original_id": "이재명-E2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T",
+      "anonymized_description": "적응적 도구 비율 10.0%→10.6% (정부 Epsilon 대비). 증가폭(+0.6%p) 미미. AI/디지털 추세의 자연 반영. 대통령 고유 기여 식별 어려움."
+    },
+    {
+      "blind_id": "B45",
+      "original_id": "이재명-F1",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "INST D1=2 (승계 + AI 관련 기본 법률 제6조/제20조 추가). D1 기본 점수(2)는 승계(T). AI 관련 기본 법률 3년 기본계획(제6조), 제도개선 의무(제20조)로 다층 환류 체계 추가(I)."
+    },
+    {
+      "blind_id": "B46",
+      "original_id": "이재명-F2",
+      "government_label": "정부 Unknown",
+      "researcher_code": "T+I",
+      "anonymized_description": "INST D2=2 (승계 + AI 관련 기본 법률 제24조 실증기반). D2 기본 점수(2)는 규제 유연화 특구 관련 법률 승계(T). AI 분야 실증특례 추가(제24조)는 I."
+    }
+  ],
+  "GPT-5.2": [
+    {
+      "round": 1,
+      "vignette_raw": "{\n  \"vignette_1\": {\n    \"classification\": \"T\",\n    \"confidence\": 0.78,\n    \"reasoning\": \"보급률 상승폭(7%p)은 이전 10년간의 연평균 증가 추세(2%p 내외)와 대체로 일치하며 주변국도 유사한 증가를 보였다. 예산 증액도 실질 기준 5%로 제한적이어서 추가적 성과를 정부의 의도적 개입으로 귀속하기 어렵다. 따라서 관측된 변화는 주로 시대적 확산 추세로 해석된다.\"\n  },\n  \"vignette_2\": {\n    \"classification\": \"I\",\n    \"confidence\": 0.86,\n    \"reasoning\": \"대형 재해 직후 조직 통합·신설, 법정기구 격상, 예산의 구조적 증액, 다수 시행령 개정 등은 명시적이고 비용이 큰 정책 선택이다. 이전 정부들이 임시대책에 그쳤다는 대비는 이번 조치가 관성적 대응을 넘어선 의도적 제도화임을 뒷받침한다. 따라서 정부 Y의 안전 거버넌스 강화는 의도적 행위로 분류된다.\"\n  },\n  \"vignette_3\": {\n    \"classification\": \"D\",\n    \"confidence\": 0.83,\n    \"reasoning\": \"법적 근거와 예산이 있는 제도를 형식적으로 유지했지만, 위원회 소집 축소와 반영률 급락 등으로 실질적 기능이 크게 약화되었다. 폐지나 대체 채널 신설 없이 방치에 가까운 운영은 참여 수준의 후퇴를 의미한다. 따라서 시민참여는 의도적 확대(I)나 단순 추세(T)보다 제도적 퇴행/약화(D)에 가깝다.\"\n  }\n}",
+      "classification_raw": "[\n  {\n    \"blind_id\": \"B01\",\n    \"classification\": \"I\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"추세 예상치를 초과한 순기여(+0.308)를 명시적으로 대통령 기여로 귀속했다. OECD 격차도 크게 축소되어 단순 추세 이상의 개선이다. 따라서 의도적 성과로 분류한다.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B02\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"WGI Percentile은 글로벌 추세가 자동 통제된 상대지표다. 8.73%p 상승은 타국 대비 상대적 개선으로 해석된다. 따라서 정부의 의도적 기여로 분류한다.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B03\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"EGDI는 복합지표로 TII/HCI는 글로벌 기술·인적자본 추세 영향이 크다. 반면 OSI 급등은 전자정부 법·서비스 확대의 정책적 요소가 크다. 디트렌딩 불가이므로 혼합으로 분류한다.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B04\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"국정과제는 대통령이 직접 설정한 어젠다로 의도성이 핵심이다. 적응적 도구 미채택은 시대적 한계가 일부 작용한다. 주된 귀인은 어젠다 설정의 의도성이다.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B05\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"전자정부 확대는 글로벌 추세와 동조하는 측면이 있다. 그러나 법률 전부개정과 표준프레임워크 도입은 체계 강화를 위한 명확한 정책결정이다. 따라서 혼합이나 I 비중이 더 크다.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B06\",\n    \"classification\": \"D\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"추세 예상치보다 성과가 낮아 순기여가 음(-0.023)으로 제시된다. 적극적 개선이 나타나지 않아 사실상 역량이 표류한 것으로 해석된다. 외부충격보다는 정부 성과 미달에 가깝다.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.0,\n    \"d_component\": 0.75,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B07\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"Percentile 소폭 상승이 글로벌 추세 범위 내로 기술되어 있다. OECD 대비 차별화가 없다고 명시된다. 따라서 추세적 변화로 분류한다.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B08\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"OSI 만점은 투자·정책 추진의 결과로 I 요소가 크다. TII 상승은 인프라 추세(T)로 제시된다. 디트렌딩 불가이므로 혼합으로 분류한다.\",\n    \"t_component\": 0.45,\n    \"i_component\": 0.55,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B09\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"국정과제 100개는 대통령이 직접 설정한 정책 어젠다다. 적응적 도구 미채택은 시대적 한계가 일부 반영된다. 주된 귀인은 어젠다 설정의 의도성이다.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B10\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"전자정부 법률 전부개정은 제도 설계를 바꾸는 의도적 행위다. 점수 변동이 없더라도 체계 강화의 질적 변화가 있다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B11\",\n    \"classification\": \"D\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"규제 유연화 법제화를 시도했으나 국회 통과 실패로 제도적 결과가 없다. 의도는 있었지만 실현되지 않아 정책효과가 공백으로 남는다. 결과 기준으로 표류/미작동에 해당한다.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.2,\n    \"d_component\": 0.8,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B12\",\n    \"classification\": \"D\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"추세 기대치 대비 순기여가 크게 음(-0.060)으로 제시된다. OECD 격차 개선도 미미해 추세를 따라가지 못했다. 외부충격 언급 없이 성과 부진이므로 표류로 분류한다.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.0,\n    \"d_component\": 0.75,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B13\",\n    \"classification\": \"D\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"Percentile이 거의 정체하며 상대적 위치 개선에 실패했다. '거버넌스 역량 표류'로 해석이 명시되어 있다. 따라서 D로 분류한다.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.0,\n    \"d_component\": 0.8,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B14\",\n    \"classification\": \"D\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"EGDI가 하락하고 OSI/TII가 동반 하락해 적극적 투자 실패가 명시된다. 다른 정부들과 달리 후퇴가 나타나 정책 추진이 약화된 것으로 보인다. 따라서 표류/역주행 성격의 D로 분류한다.\",\n    \"t_component\": 0.15,\n    \"i_component\": 0.0,\n    \"d_component\": 0.85,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B15\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"데이터 기반 정책의 등장은 글로벌 디지털 전환 추세(T) 영향이 크다. 동시에 적응적 도구 비율 증가(0→3.6)는 정부 선택의 결과다. 혼합으로 분류한다.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B16\",\n    \"classification\": \"D\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"입법 실패로 제도 도입이 결과적으로 부재하다. 시도는 있었으나 정책이 작동할 기반이 형성되지 않았다. 따라서 D로 분류한다.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.15,\n    \"d_component\": 0.85,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B17\",\n    \"classification\": \"D\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"이니셔티브는 존재하지만 시민 피드백 채널 기능이 형식적이라고 명시된다. 제도는 있으나 실질이 약화된 전형적 형식화/미작동 사례다. 따라서 D로 분류한다.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.0,\n    \"d_component\": 0.9,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B18\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"AI/지능화는 글로벌 추세와 동조한다. 그러나 법률 개정으로 지능형 전자정부서비스 조항을 신설한 것은 명확한 정책결정이다. I가 주된 귀인인 혼합으로 분류한다.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B19\",\n    \"classification\": \"I\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"추세 예상치를 크게 초과한 순기여(+0.233)가 제시된다. OECD 평균을 사상 최초로 추월하는 구조적 개선이 동반된다. 따라서 의도적 기여(I)로 분류한다.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B20\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"Percentile 9.05%p 상승은 글로벌 대비 상대적 대폭 개선을 의미한다. 6개 정부 중 최대 상승폭으로 차별화가 크다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B21\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"EGDI 소폭 상승이며 순위 변동이 없다. TII 상승은 인프라 추세로, OSI는 정체로 제시된다. 전반적으로 글로벌 디지털화 추세 내 변화로 분류한다.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B22\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"DGI 첫 시행 1위는 높은 역량을 보여주나 누적 투자 효과가 포함된다고 명시된다. 동시에 해당 시점의 운영·성과 제시는 정부의 관리 역량(I)도 반영된다. 혼합으로 분류한다.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B23\",\n    \"classification\": \"I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"국정과제는 대통령이 직접 설정한 어젠다로 의도성이 핵심이다. 적응적 도구 2건이 포함되어 정책 선택이 확인된다. 비율 하락은 있으나 분류의 주된 귀인은 I다.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B24\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"기본 법률 승계는 경로의존적 추세(T)다. 그러나 데이터 산업 법률 조항(실태조사) 추가는 질적 보강의 의도적 개정이다. 따라서 혼합으로 분류한다.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B25\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"데이터 산업 관련 법률 제정과 전자정부 법률 개정은 명확한 제도 구축 행위다. 점수 유지(1)는 미비점이 있으나 질적 기반 구축이 핵심이다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B26\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"입법 주도는 국회로 정부 단독 성과로 보기 어렵다. 다만 대통령의 서명·공포(거부권 미행사)는 의도적 선택이다. 외부충격보다는 제도화 과정의 혼합으로 분류한다.\",\n    \"t_component\": 0.7,\n    \"i_component\": 0.3,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B27\",\n    \"classification\": \"E\",\n    \"confidence\": 0.55,\n    \"reasoning\": \"대규모 안전사고라는 외부 충격이 특별법 제정의 직접 계기다. 대통령은 거부권을 행사했으나 국회 재의결로 시행되어 정부 통제 밖 요인이 크다. 따라서 외부요인(E)을 주된 귀인으로 둔다.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.2,\n    \"d_component\": 0.0,\n    \"e_component\": 0.8\n  },\n  {\n    \"blind_id\": \"B28\",\n    \"classification\": \"D\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"위원회 출범은 법적 의무 이행이지만 시행까지 571일 지연되어 실질 작동이 늦었다. 제도는 있으나 적시에 기능하지 못한 측면이 강하다. 따라서 D로 분류한다.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.1,\n    \"d_component\": 0.8,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B29\",\n    \"classification\": \"T\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"순기여가 추세와 거의 일치(+0.030)로 제시된다. 데이터가 2년치로 제한되어 의도적 효과를 식별하기 어렵다. 따라서 추세(T)로 분류한다.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B30\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"Percentile이 거의 정체하며 기존 수준 유지로 기술된다. '임기 성과의 관성적 지속'이 명시되어 경로의존이 핵심이다. 따라서 T로 분류한다.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B31\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"EGDI 소폭 상승에도 순위가 1단계 하락하는 자연 변동으로 설명된다. 글로벌 디지털화 추세 내 변화로 제시된다. 따라서 T로 분류한다.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B32\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"DGI 1위 유지는 전임 누적 투자(T)와 현 정부 운영(I) 혼합이라고 명시된다. Data-Driven 만점도 기존 법·체계 성숙 효과가 크다. 따라서 T가 주된 혼합으로 분류한다.\",\n    \"t_component\": 0.7,\n    \"i_component\": 0.3,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B33\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"3회 연속 1위지만 증가폭이 미미하고 OECD 평균 증가보다 작아 격차가 줄었다. '관성적 유지'로 기술되어 적극적 혁신보다는 유지·추세에 가깝다. 따라서 T로 분류한다.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B34\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"국정과제 설정은 대통령의 직접 어젠다 결정이다. 적응적 도구 비율이 10%로 대폭 증가해 의도적 채택이 뚜렷하다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B35\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"적응적 도구 확대는 AI/디지털 전환이라는 추세(T) 영향이 있다. 그러나 10%까지의 급증은 대통령의 어젠다 선택(I)이 핵심 동인으로 제시된다. I가 주된 혼합으로 분류한다.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B36\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"기본 점수는 승계(T)로 명시된다. AAR 환류 채널 추가는 새 제도 요소로 I에 해당한다. 법 제정은 국회 주도라는 제한이 있어 혼합으로 분류한다.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B37\",\n    \"classification\": \"D\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"AI 기본법을 공포했으나 시행 전으로 실질 운영이 없다고 명시된다. 제도는 존재하지만 작동하지 않는 상태다. 따라서 D로 분류한다.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.1,\n    \"d_component\": 0.7,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B38\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"하위법령 정비, 위원회 구성, 연구소 설치 등 실질 운영 개시는 집행정부의 의도적 집행이다. 법률 통과·공포는 타 행위지만, 시행 단계의 정책역량이 핵심이다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.15,\n    \"i_component\": 0.85,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B39\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"규제 유연화 특구 법률의 '개정'은 단순 승계가 아닌 정책결정이다. 제도 내용을 최신화하는 의도적 변경에 해당한다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B40\",\n    \"classification\": \"I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"정부 업무 평가 기본법의 최신 개정은 제도 설계 변경을 수반한다. 단순 유지가 아니라 개정 의사결정이 존재한다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.3,\n    \"i_component\": 0.7,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B41\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"해당 정부가 개정한 것이 아니라 이전 정부 공포 개정안의 '시행'이다. 법 시행은 예정된 경로의 자연스러운 연장으로 해석된다. 따라서 T로 분류한다.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B42\",\n    \"classification\": \"E\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"대규모 감염병 위기 대응으로 재난소득이 추진된 사례다. 정책 자체는 의도적이지만 촉발 요인은 팬데믹이라는 외부 충격이다. 또한 대통령직 행위가 아니라 참고로 제시되어 E로 둔다.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.3,\n    \"d_component\": 0.0,\n    \"e_component\": 0.7\n  },\n  {\n    \"blind_id\": \"B43\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"국정과제 123개는 대통령이 직접 설정한 어젠다다. 적응적 도구 10.6% 및 AI 과제 비중 최대는 의도적 우선순위 설정을 시사한다. 따라서 I로 분류한다.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B44\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"적응적 도구 비율 증가폭이 미미하고 자연 반영으로 기술된다. 대통령 고유 기여 식별이 어렵다고 명시된다. 따라서 추세(T)로 분류한다.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B45\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"D1 기본 점수는 승계(T)다. AI 기본계획 및 제도개선 의무 추가는 환류 체계의 의도적 확장이다. 따라서 혼합으로 분류한다.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B46\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"D2 기본 점수는 기존 샌드박스 법률 승계(T)다. AI 분야 실증특례 추가는 규제 실험 범위를 넓히는 의도적 개정(I)이다. 따라서 혼합으로 분류한다.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  }\n]",
+      "identification_raw": "{\n  \"정부 Unknown\": {\n    \"guess\": \"식별 불가\",\n    \"confidence\": 0.0,\n    \"clues\": \"요청에서 '이전 과제에서 제시된 정책 행위 기술'을 근거로 판단하라고 했으나, 본 대화에는 해당 정책 행위 기술이 제공되지 않아 식별 단서가 없음\"\n  }\n}"
+    },
+    {
+      "round": 2,
+      "classification_raw": "[\n  {\n    \"blind_id\": \"B01\",\n    \"classification\": \"I\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"추세 예상치를 초과한 순기여(+0.308)가 명시되어 있으며 이를 대통령 기여로 귀속한다고 제시됨. OECD 격차도 크게 축소되어 상대적 개선이 뚜렷함. 따라서 의도적 성과(I)로 분류.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B02\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"WGI Percentile은 글로벌 추세가 자동 통제된 지표이며 8.73pp 상승은 상대적 개선을 의미함. 기술에 대통령 기여로 귀속한다고 명시됨. 따라서 I로 분류.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B03\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"EGDI는 복합지표로 TII/HCI는 글로벌 기술·인적자본 추세(T) 영향이 크다고 명시됨. 반면 OSI 급등은 전자정부 법·서비스 확대의 정책결정(I) 요소로 제시됨. 혼합이나 OSI 급등이 핵심 변화이므로 I 비중을 더 크게 부여.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B04\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"국정과제는 대통령이 직접 설정한 어젠다로 의도적 결정(I)에 해당함. 적응적 도구 미채택은 시대적 한계가 일부 있으나, 과제 설정 행위 자체는 정부 선택임. 따라서 I 중심으로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B05\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"전자정부 확대는 글로벌 추세와 동조(T)라고 명시됨. 그러나 법률 전부개정과 표준프레임워크 도입은 단순 승계가 아닌 체계 강화의 의사결정(I)임. 혼합이나 전부개정의 제도변경을 중시해 I 비중을 높임.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B06\",\n    \"classification\": \"D\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"추세 예상치보다 성과가 하회하여 순기여가 음(-0.023)으로 제시됨. 이는 의도적 개선이 아니라 역량이 기대만큼 작동하지 못한 상태로 해석 가능함. 다만 하락폭이 크지 않아 표류(D)로 약하게 분류.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.05,\n    \"d_component\": 0.6,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B07\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"Percentile 소폭 상승이 글로벌 추세 범위 내이며 OECD 대비 차별화가 없다고 명시됨. 상대적 개선이 뚜렷하지 않아 의도적 기여를 식별하기 어려움. 따라서 추세(T)로 분류.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B08\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"OSI 만점은 전자정부 투자(I)로 제시됨. TII 상승은 인프라 추세(T) 영향이 크다고 명시됨. 1위 달성은 투자 결과라는 서술을 반영해 I 비중을 더 크게 부여.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B09\",\n    \"classification\": \"I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"국정과제 100개는 대통령이 직접 설정한 어젠다로 의도적 결정(I)임. 적응적 도구 미채택은 시대적 한계가 일부 반영되나, 행위의 핵심은 어젠다 설정임. 따라서 I로 분류.\",\n    \"t_component\": 0.3,\n    \"i_component\": 0.7,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B10\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"전자정부 관련 법률 전부개정은 제도 체계 강화의 명확한 정책결정(I)임. 점수 변동이 없더라도 질적 강화가 있었다고 기술됨. 따라서 I로 분류.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B11\",\n    \"classification\": \"D\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"법률 추진이 국회 통과 실패로 결과가 미달성되어 제도적 효과가 없다고 명시됨. 의도(I)는 있었으나 실현되지 않아 정책이 공전한 상태로 볼 수 있음. 따라서 표류/미작동(D)로 분류.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.2,\n    \"d_component\": 0.7,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B12\",\n    \"classification\": \"D\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"추세 예상치 대비 순기여가 크게 음(-0.060)으로 제시되어 기대 성과를 달성하지 못함. OECD 격차 개선은 있으나 추세 기대치에 크게 미달한다고 명시됨. 의도적 개선보다는 역량 표류로 해석해 D로 분류.\",\n    \"t_component\": 0.3,\n    \"i_component\": 0.05,\n    \"d_component\": 0.65,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B13\",\n    \"classification\": \"D\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"Percentile이 거의 정체이며 상대적 위치 개선 실패로 기술됨. '거버넌스 역량 표류'라는 평가가 직접 제시됨. 따라서 D로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.05,\n    \"d_component\": 0.7,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B14\",\n    \"classification\": \"D\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"6개 정부 중 유일한 EGDI 하락이며 OSI/TII가 동반 하락함. '적극적 투자 실패'로 명시되어 정책 추진이 약화된 상태로 해석됨. 따라서 D로 분류.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.05,\n    \"d_component\": 0.75,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B15\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"데이터 기반 정책 등장은 글로벌 디지털 전환 추세(T)와 대통령 선택(I)의 혼합이라고 명시됨. 비율 증가(0→3.6)는 정부의 채택 의지가 반영됨. 혼합이나 추세 기반 위에 선택이 더해진 것으로 봄.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B16\",\n    \"classification\": \"D\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"입법 실패로 결과적 부재라고 명시됨. 제도화가 이루어지지 않아 정책 효과가 발생하지 않음. 따라서 D로 분류.\",\n    \"t_component\": 0.05,\n    \"i_component\": 0.15,\n    \"d_component\": 0.8,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B17\",\n    \"classification\": \"D\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"이니셔티브는 존재하나 실질 기능이 약화되고 형식적으로 운영되었다고 명시됨. 제도는 있으나 작동이 미흡한 전형적 표류(D) 사례임. 따라서 D로 분류.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.05,\n    \"d_component\": 0.85,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B18\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"AI/지능화는 글로벌 추세(T)와 동조하나, 법률 개정으로 조항을 신설한 입법 의사결정은 명확한 I임. 제도 변경의 구체성이 높아 I 비중을 크게 부여. 따라서 T+I로 분류.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B19\",\n    \"classification\": \"I\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"추세 예상치를 크게 초과한 순기여(+0.233)가 제시되며 대통령 기여로 귀속됨. OECD 평균을 사상 최초로 추월하는 구조적 개선이 나타남. 따라서 I로 분류.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B20\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"WGI Percentile 9.05pp 상승은 글로벌 대비 상대적 대폭 개선을 의미함. 6개 정부 중 최대 상승폭으로 차별적 성과가 큼. 따라서 I로 분류.\",\n    \"t_component\": 0.15,\n    \"i_component\": 0.85,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B21\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"EGDI 소폭 상승이며 순위 변동이 없고, 글로벌 디지털화 추세 내 변화라고 명시됨. TII 상승도 인프라 추세(T)로 제시되고 OSI는 정체. 따라서 T로 분류.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B22\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"DGI 첫 시행에서 1위는 높은 역량을 보여주나, 이전 정부 누적 투자 효과(T)도 포함된다고 명시됨. 동시에 해당 시점의 운영·성과 제시는 일정한 I도 내포함. 혼합으로 분류하되 누적효과 비중을 더 크게 둠.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B23\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"국정과제는 대통령이 직접 설정한 어젠다로 I 요소가 큼. 적응적 도구 2건은 ICT/4차산업혁명 등 시대적 디지털 전환 추세(T)와 결합됨. 따라서 혼합으로 분류.\",\n    \"t_component\": 0.45,\n    \"i_component\": 0.55,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B24\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"기본 법률 승계는 경로의 연장(T)로 명시됨. 데이터 산업 관련 조항(실태조사) 추가는 보강(I)으로 제시됨. 점수 변동은 없으나 질적 심화가 있어 혼합으로 분류.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B25\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"데이터 산업 관련 법률 제정과 전자정부 법률 개정은 명확한 제도 구축 행위(I)임. AI 기본법 미제정으로 점수는 유지되나, 질적 기반 구축이 있었다고 명시됨. 따라서 I로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B26\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"입법 주도는 국회로 정부 외부 요인이 크지만, 대통령의 서명·공포(거부권 미행사)는 의도적 결정(I)로 기술됨. 또한 AI 기본법 제정은 시대적 AI 확산 추세(T)와도 연동됨. 따라서 혼합으로 분류.\",\n    \"t_component\": 0.45,\n    \"i_component\": 0.55,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B27\",\n    \"classification\": \"E\",\n    \"confidence\": 0.55,\n    \"reasoning\": \"법 제정은 국회 주도이며 대통령 거부권 행사 후 재의결로 공포되어 정부 통제 밖 요인이 큼. 대통령의 거부권은 I-(부정적 의도)이나 결과는 외부(입법부) 결정으로 좌우됨. 따라서 외부(E) 중심으로 분류.\",\n    \"t_component\": 0.05,\n    \"i_component\": 0.25,\n    \"d_component\": 0.0,\n    \"e_component\": 0.7\n  },\n  {\n    \"blind_id\": \"B28\",\n    \"classification\": \"T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"특별법에 수반된 조직으로서 출범은 법적 의무 이행에 해당함. 571일 지연은 운영상 문제를 시사하나, 기술은 '의무 이행'에 초점이 있음. 따라서 경로의 연장/의무적 집행(T)로 분류.\",\n    \"t_component\": 0.75,\n    \"i_component\": 0.05,\n    \"d_component\": 0.2,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B29\",\n    \"classification\": \"T\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"순기여가 추세와 거의 일치(+0.030)하며 판단 제한(2년치)이라고 명시됨. 차별적 정책효과를 식별하기 어려움. 따라서 T로 분류.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B30\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"Percentile이 거의 정체이며 기존 수준 유지로 기술됨. '정부 Alpha 임기 성과의 관성적 지속'이라고 명시되어 경로의 연장(T)임. 따라서 T로 분류.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B31\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"EGDI 소폭 상승에도 순위가 1단계 하락하며 자연 변동으로 기술됨. 글로벌 디지털화 추세 내 변화로 해석됨. 따라서 T로 분류.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B32\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"DGI 1위 유지는 전임 정부 누적 투자(T)와 현 정부 운영(I) 혼합이라고 명시됨. Data-Driven 만점은 기존 법·체계 성숙 효과가 크다는 서술이 있음. 따라서 혼합으로 분류하되 T 비중을 더 크게 둠.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B33\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"3회 연속 1위 유지이나 증가폭이 미미하고 OECD 평균 증가보다 작아 격차가 축소됨. '기존 체계의 관성적 유지'로 기술됨. 따라서 T로 분류.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B34\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"국정과제는 대통령이 직접 설정하며 적응적 도구 비율이 10%로 대폭 증가함. 전임 대비 급증은 어젠다 설계와 도구 채택의 의도적 결정으로 해석됨. 따라서 I로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B35\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"적응적 도구 증가의 일부는 글로벌 AI/디지털 전환 추세(T)라고 명시됨. 그러나 10%까지의 급증은 대통령의 어젠다 선택(I) 기여가 있다고 제시됨. 따라서 혼합으로 분류.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B36\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"D1 기본 점수는 승계(T)로 명시됨. AAR 환류 채널 추가는 새 제도 보강(I)이나, 법 제정은 국회 주도라는 제약이 있음. 따라서 혼합으로 분류.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B37\",\n    \"classification\": \"D\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"AI 기본법은 공포했으나 시행 전으로 실질 운영이 없다고 명시됨. 제도는 존재하나 작동하지 않는 상태에 해당함. 따라서 D로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.15,\n    \"d_component\": 0.6,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B38\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"시행 시점의 하위법령 정비, 위원회 구성, 연구소 설치 등 실질 운영 개시가 정부의 의도적 집행으로 명시됨. 법률 통과·공포의 경로와 별개로 집행이 핵심 행위임. 따라서 I로 분류.\",\n    \"t_component\": 0.15,\n    \"i_component\": 0.85,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B39\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"규제 유연화 특구 관련 법률의 '개정'은 단순 승계가 아닌 의사결정으로 명시됨. 제도 변경을 통해 정책수단을 조정한 행위임. 따라서 I로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B40\",\n    \"classification\": \"I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"정부 업무 평가 관련 기본 법률의 최신 개정은 제도 변경을 수반하는 의도적 결정임. 단순 유지가 아니라 규정·절차를 조정하는 행위로 해석됨. 따라서 I로 분류.\",\n    \"t_component\": 0.3,\n    \"i_component\": 0.7,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B41\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"해당 시행은 이전 정부 기간에 공포된 개정안의 시행으로, 현 정부의 자체 개정이 아님. 법 시행은 예정된 경로의 이행에 가깝다. 따라서 T로 분류.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B42\",\n    \"classification\": \"E\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"대규모 감염병 위기 대응으로 촉발된 재난소득은 외부 충격(팬데믹)이 주된 원인임. 또한 대통령직이 아닌 지사 시절 사례로 중앙정부 행위로 보기 어렵다. 따라서 E 중심으로 분류.\",\n    \"t_component\": 0.05,\n    \"i_component\": 0.25,\n    \"d_component\": 0.0,\n    \"e_component\": 0.7\n  },\n  {\n    \"blind_id\": \"B43\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"국정과제 123개와 적응적 도구 10.6%는 대통령이 직접 설정한 어젠다로 명시됨. AI 관련 과제 비중을 최대화한 것은 우선순위 재배분의 의도적 선택으로 해석됨. 따라서 I로 분류.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B44\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"적응적 도구 비율 증가폭이 미미하며 AI/디지털 추세의 자연 반영으로 기술됨. 대통령 고유 기여 식별이 어렵다고 명시됨. 따라서 T로 분류.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B45\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"D1 기본 점수는 승계(T)로 명시됨. AI 기본계획 및 제도개선 의무 추가는 다층 환류 체계의 명확한 보강(I)임. 따라서 혼합으로 분류.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B46\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"D2 기본 점수는 기존 특구 법률 승계(T)로 명시됨. AI 분야 실증특례 추가는 규제실험 수단을 확장하는 의도적 개정(I)임. 따라서 혼합으로 분류.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  }\n]"
+    },
+    {
+      "round": 3,
+      "classification_raw": "[\n  {\n    \"blind_id\": \"B01\",\n    \"classification\": \"I\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"추세 예상치를 초과한 순기여(+0.308)가 명시되어 있으며 이를 대통령 기여로 귀속한다고 제시됨. OECD 격차도 크게 축소되어 상대적 개선이 확인됨.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B02\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"WGI Percentile은 글로벌 추세가 자동 통제된 상대지표임. 8.73%p 상승은 타국 대비 상대적 개선이므로 정부의 의도적 성과로 귀속하는 것이 타당함.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B03\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"EGDI는 복합지표로 TII/HCI는 글로벌 기술·인적자본 추세 영향이 큼. 반면 OSI 급등은 전자정부 법·서비스 확대의 정책결정(I) 성격이 강함.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B04\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"국정과제 설정은 대통령의 직접적 어젠다 결정으로 I가 핵심임. 다만 적응적 도구 미채택은 당시 개념 부재라는 시대적 한계(T)도 함께 작용함.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B05\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"전자정부 법률 전부개정과 표준프레임워크 도입은 체계 강화를 위한 의도적 제도변경(I). 다만 전자정부 확대 자체는 글로벌 추세와 동조(T) 요소가 존재함.\",\n    \"t_component\": 0.3,\n    \"i_component\": 0.7,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B06\",\n    \"classification\": \"D\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"추세 예상치보다 성과가 낮아 순기여가 음(-0.023)으로 제시됨. 적극적 개선이 나타나지 않고 추세를 하회하는 표류/역기여로 해석 가능함.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.1,\n    \"d_component\": 0.7,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B07\",\n    \"classification\": \"T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"Percentile 소폭 상승이 글로벌 추세 범위 내로 기술됨. OECD 대비 차별화가 없으므로 구조적·시대적 추세(T)로 보는 것이 적절함.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B08\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"OSI 만점은 투자·서비스 고도화의 정책적 선택(I) 가능성이 큼. TII 상승은 인프라의 일반적 추세(T)로 설명되어 혼합 귀인이 타당함.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B09\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"국정과제 100개 설정은 대통령의 의도적 어젠다(I). 적응적 도구 미채택은 시대적 한계(T)도 함께 반영된 것으로 제시됨.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B10\",\n    \"classification\": \"I\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"전자정부 법률 전부개정은 제도 설계의 명확한 의사결정(I). 점수 변동이 없더라도 체계 강화라는 질적 변화가 핵심임.\",\n    \"t_component\": 0.15,\n    \"i_component\": 0.85,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B11\",\n    \"classification\": \"D\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"법제화를 시도했으나 국회 통과 실패로 제도적 효과가 발생하지 않음. 의도는 있었으나 결과가 부재하여 정책이 표류한 사례로 분류함.\",\n    \"t_component\": 0.05,\n    \"i_component\": 0.2,\n    \"d_component\": 0.75,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B12\",\n    \"classification\": \"D\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"추세 예상 대비 순기여가 크게 음(-0.060)으로 제시되어 성과가 추세를 현저히 하회함. 개선이 정체된 표류/역기여로 해석 가능함.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.1,\n    \"d_component\": 0.7,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B13\",\n    \"classification\": \"D\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"Percentile이 사실상 정체(+0.38)하여 상대적 개선이 거의 없음. 기술문에서 '거버넌스 역량 표류'로 해석을 제시하고 있어 D가 적합함.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.05,\n    \"d_component\": 0.7,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B14\",\n    \"classification\": \"D\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"EGDI가 하락하고(OSI/TII 동반 하락) 순위도 1→3으로 후퇴함. '적극적 투자 실패'로 명시되어 정책적 표류/관리 실패(D) 성격이 강함.\",\n    \"t_component\": 0.15,\n    \"i_component\": 0.1,\n    \"d_component\": 0.75,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B15\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"데이터 기반 정책 확산은 글로벌 디지털 전환이라는 추세(T) 영향이 큼. 동시에 적응적 도구 비율 상승은 정부의 선택(I)도 포함됨.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B16\",\n    \"classification\": \"D\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"입법을 시도했으나 실패하여 결과적으로 제도 부재가 발생함. 의도 대비 성과가 실현되지 않은 표류로 분류함.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.2,\n    \"d_component\": 0.8,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B17\",\n    \"classification\": \"D\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"이니셔티브는 존재하나 실질 기능이 약화되고 형식적으로 운영된다고 명시됨. 제도는 있으나 작동이 미흡한 전형적 표류(D) 사례임.\",\n    \"t_component\": 0.05,\n    \"i_component\": 0.05,\n    \"d_component\": 0.9,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B18\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"지능형 전자정부서비스 조항 신설은 명확한 입법적 의사결정(I). 다만 AI/지능화는 글로벌 추세(T)와 동조한다는 점이 함께 제시됨.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B19\",\n    \"classification\": \"I\",\n    \"confidence\": 0.9,\n    \"reasoning\": \"추세 예상 대비 순기여가 크게 양(+0.233)으로 제시되어 추세 초과 성과가 확인됨. OECD 평균을 최초로 추월하는 구조적 개선이 나타나 대통령 기여로 귀속 가능함.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B20\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"Percentile 9.05%p 상승은 글로벌 대비 상대적 대폭 개선을 의미함. 6개 정부 중 최대 상승폭으로 차별적 성과가 커 의도적 기여(I)로 분류함.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B21\",\n    \"classification\": \"T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"EGDI 소폭 상승과 순위 유지가 '글로벌 디지털화 추세 내'로 기술됨. OSI 정체, TII 상승(추세) 중심이어서 T가 주된 귀인임.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B22\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"DGI 첫 시행에서 1위는 높은 역량을 보여주나, 이전 정부의 누적 투자 효과가 포함된다고 명시됨. 따라서 경로의존적 축적(T)과 현 정부 운영(I)이 혼합됨.\",\n    \"t_component\": 0.65,\n    \"i_component\": 0.35,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B23\",\n    \"classification\": \"I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"국정과제는 대통령이 직접 설정한 어젠다로 I 성격이 강함. 적응적 도구가 포함되어 있으며(2건) 정부의 선택이 관찰됨.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B24\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"기본 법률 승계는 경로의존적 연장(T)으로 제시됨. 동시에 데이터 산업 법률 조항 추가는 질적 보강의 의도적 결정(I)임.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B25\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"데이터 산업 관련 법률 제정 및 전자정부 법률 개정은 명확한 제도 구축(I). AI 기본법 미제정으로 점수는 유지되었으나 질적 기반을 만든 행위임.\",\n    \"t_component\": 0.2,\n    \"i_component\": 0.8,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B26\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.55,\n    \"reasoning\": \"입법 주도는 국회로 외생적 요소가 크고, 해당 정부는 거부권 미행사 및 공포 서명으로 제한적 관여를 함. 실질 시행은 다른 정부에서 이루어져 경로상 연장(T) 비중이 큼.\",\n    \"t_component\": 0.7,\n    \"i_component\": 0.3,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B27\",\n    \"classification\": \"E\",\n    \"confidence\": 0.6,\n    \"reasoning\": \"법 제정은 국회 주도이며 대통령 거부권 행사 후 재의결로 공포되어 정부 통제 밖 요인이 큼. 대통령의 거부권은 부정적 의도(I-)이나 결과는 외부(입법부) 결정에 의해 좌우됨.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.2,\n    \"d_component\": 0.0,\n    \"e_component\": 0.8\n  },\n  {\n    \"blind_id\": \"B28\",\n    \"classification\": \"T\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"특별법에 수반된 조직으로서 출범은 법적 의무 이행에 가까움. 지연(571일)은 운영역량 문제일 수 있으나, 기술문은 '의무 이행'에 초점을 둠.\",\n    \"t_component\": 0.8,\n    \"i_component\": 0.1,\n    \"d_component\": 0.1,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B29\",\n    \"classification\": \"T\",\n    \"confidence\": 0.55,\n    \"reasoning\": \"순기여가 +0.030으로 추세와 거의 일치한다고 제시됨. 데이터가 2년치로 제한되어 의도적 효과를 강하게 주장하기 어려움.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B30\",\n    \"classification\": \"T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"Percentile이 거의 정체이며 기존 수준 유지로 기술됨. '전임 정부 성과의 관성적 지속'이라고 명시되어 추세/경로의존(T)로 분류함.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B31\",\n    \"classification\": \"T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"EGDI 소폭 상승에도 순위가 1단계 하락하는 자연 변동으로 설명됨. 글로벌 디지털화 추세 내 변동으로 T가 주된 귀인임.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B32\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"DGI 1위 유지 및 점수 상승은 전임 누적 투자(T)와 현 정부 운영(I)의 혼합으로 기술됨. Data-Driven 만점도 기존 법·체계 성숙 효과가 큼.\",\n    \"t_component\": 0.65,\n    \"i_component\": 0.35,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B33\",\n    \"classification\": \"T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"3회 연속 1위이나 증가폭이 미미하고 OECD 평균 증가보다 작아 격차가 축소됨. '관성적 유지'로 제시되어 추세/경로의존(T) 성격이 강함.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B34\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"적응적 도구 비율을 10%로 대폭 확대하고 과제에 반영한 것은 대통령 어젠다 선택(I) 영향이 큼. 동시에 AI/디지털 시대 반영은 거시 추세(T)도 작용함.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B35\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"적응적 도구 증가에는 글로벌 AI/디지털 전환(T)이 일부 기여함. 그러나 10%까지의 급증은 정책 우선순위 설정이라는 의도(I)가 핵심으로 제시됨.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.6,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B36\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.65,\n    \"reasoning\": \"기본 점수는 승계(T)로 명시됨. AAR 환류 채널 추가는 의도적 제도 보강(I)이지만, 법 제정은 국회 주도라는 제약이 존재함.\",\n    \"t_component\": 0.6,\n    \"i_component\": 0.4,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B37\",\n    \"classification\": \"D+T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"AI 기본법은 공포했으나 시행 전으로 실질 운영이 없다고 명시되어 제도 미작동(D) 성격이 강함. 기존 디지털·데이터 수준 유지는 관성적 지속(T)임.\",\n    \"t_component\": 0.4,\n    \"i_component\": 0.05,\n    \"d_component\": 0.55,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B38\",\n    \"classification\": \"I\",\n    \"confidence\": 0.85,\n    \"reasoning\": \"하위법령 정비, 위원회 구성, 연구소 설치 등 실질 운영 개시는 집행정부의 의도적 집행(I)으로 기술됨. 법 통과·공포의 외부 요인과 구분해 시행 단계의 정책결정이 핵심임.\",\n    \"t_component\": 0.1,\n    \"i_component\": 0.9,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B39\",\n    \"classification\": \"I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"규제 유연화 특구 법률의 '개정'은 단순 승계가 아닌 의사결정으로 제시됨. 제도 변경 자체가 의도적 정책행위(I)에 해당함.\",\n    \"t_component\": 0.25,\n    \"i_component\": 0.75,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B40\",\n    \"classification\": \"I\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"정부 업무 평가 기본 법률의 최신 개정은 제도 설계 변경을 수반하는 의도적 행위(I). 단순 유지가 아니라 개정 결정을 했다는 점이 핵심임.\",\n    \"t_component\": 0.3,\n    \"i_component\": 0.7,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B41\",\n    \"classification\": \"T\",\n    \"confidence\": 0.8,\n    \"reasoning\": \"해당 정부가 공포·개정한 것이 아니라 이전 정부에서 공포된 개정안의 '시행' 단계임. 법정 시행일 도래에 따른 경로의존적 이행(T)으로 보는 것이 타당함.\",\n    \"t_component\": 0.9,\n    \"i_component\": 0.1,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B42\",\n    \"classification\": \"E\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"대규모 감염병 위기 대응으로 재난소득을 발표한 사례로 외부 충격(팬데믹)이 직접 원인임. 또한 대통령직이 아닌 지사 시절로 중앙정부 정책성과로 귀속하기 어렵다는 점도 외부 요인으로 처리함.\",\n    \"t_component\": 0.0,\n    \"i_component\": 0.2,\n    \"d_component\": 0.0,\n    \"e_component\": 0.8\n  },\n  {\n    \"blind_id\": \"B43\",\n    \"classification\": \"I+T\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"국정과제 및 적응적 도구 구성은 대통령의 직접 설정으로 I가 중심임. AI/디지털 과제 비중 확대는 시대적 기술 추세(T) 반영도 포함됨.\",\n    \"t_component\": 0.35,\n    \"i_component\": 0.65,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B44\",\n    \"classification\": \"T\",\n    \"confidence\": 0.7,\n    \"reasoning\": \"적응적 도구 비율 증가폭이 미미하고 자연 반영으로 기술됨. 대통령 고유 기여 식별이 어렵다고 명시되어 추세(T)로 분류함.\",\n    \"t_component\": 0.85,\n    \"i_component\": 0.15,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B45\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"D1 기본 점수는 승계(T)로 제시됨. AI 기본계획 및 제도개선 의무 추가는 환류체계의 의도적 강화(I)임.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  },\n  {\n    \"blind_id\": \"B46\",\n    \"classification\": \"T+I\",\n    \"confidence\": 0.75,\n    \"reasoning\": \"D2 기본 점수는 기존 특구 법률 승계(T). AI 분야 실증특례 추가는 규제도구의 의도적 확장(I)으로 해석됨.\",\n    \"t_component\": 0.55,\n    \"i_component\": 0.45,\n    \"d_component\": 0.0,\n    \"e_component\": 0.0\n  }\n]"
+    }
+  ]
+}
