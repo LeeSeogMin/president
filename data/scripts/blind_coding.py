@@ -48,7 +48,9 @@ def extract_borderline_cases(md_path: Path) -> List[Dict[str, str]]:
         # Detect president section headers
         if re.match(r"^## \d+\.\s+(.+?)\s*\(", line):
             m = re.match(r"^## \d+\.\s+(.+?)\s*\(", line)
-            current_president = m.group(1).strip()
+            raw = m.group(1).strip()
+            # "노무현 정부" → "노무현" (label_map 키와 일치시키기)
+            current_president = raw.replace(" 정부", "").strip()
             continue
 
         # Parse table rows
