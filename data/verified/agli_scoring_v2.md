@@ -1,10 +1,9 @@
-# AGLI v2 (적응적 거버넌스 법제도 지표, Adaptive Governance Legal Infrastructure)
+# AGLI (적응적 거버넌스 법제도 지표, Adaptive Governance Legal Infrastructure)
 
 > 작성일: 2026-03-26
 > 이론적 기반: Ostrom (2005) IAD Framework — Rules-in-Form vs. Rules-in-Use
-> 스케일: 0-4 (기존 INST 0-2 스케일 대체)
+> 스케일: 0-4
 > 데이터 근거: `inst_operation_data.md` (운영 데이터)
-> 이전 버전: `inst_scoring_verified.md` (폐기)
 
 ---
 
@@ -12,18 +11,17 @@
 
 ### Rules-in-Form vs. Rules-in-Use
 
-Ostrom (2005, *Understanding Institutional Diversity*)은 공식적 법규(rules-in-form)와 실제 행위자가 따르는 운영 규범(rules-in-use) 간의 괴리를 제도 분석의 핵심으로 제시하였다. 기존 INST 스케일(0-2)은 법률의 존재 여부만으로 채점하여 rules-in-form만 반영하였다. 이로 인해:
+Ostrom (2005, *Understanding Institutional Diversity*)은 공식적 법규(rules-in-form)와 실제 행위자가 따르는 운영 규범(rules-in-use) 간의 괴리를 제도 분석의 핵심으로 제시하였다. 법률의 존재 여부만으로 채점하면 rules-in-form만 반영되어 변별력이 제한된다. 예컨대:
 
-- D1(정책 피드백): 전 정부 2점 (변별력 0)
-- D3(시민참여): 전 정부 1점 (변별력 0)
+- D1(정책 피드백): 법률 존재만으로 채점 시 전 정부 동일 점수 (변별력 0)
+- D3(시민참여): 법률 존재만으로 채점 시 전 정부 동일 점수 (변별력 0)
 
-AGLI v2는 법률 존재(rules-in-form) + 실제 작동 수준(rules-in-use)을 결합한 0-4 스케일로 재설계하여, 동일 법률 하에서도 정부별 운영 차이를 포착한다.
+AGLI는 법률 존재(rules-in-form) + 실제 작동 수준(rules-in-use)을 결합한 0-4 스케일로 설계하여, 동일 법률 하에서도 정부별 운영 차이를 포착한다.
 
-### 명칭 변경
+### 명칭 및 이론적 위치
 
-- **기존**: INST (제도적 적응 메커니즘, Institutional Adaptive Capacity)
-- **신규**: AGLI (적응적 거버넌스 법제도 지표, Adaptive Governance Legal Infrastructure)
-- **변경 사유**: Ostrom IAD 프레임워크 기반의 rules-in-form + rules-in-use 통합 측정을 반영
+- **AGLI** (Adaptive Governance Legal Infrastructure, 적응적 거버넌스 법제도 지표)
+- Ostrom IAD 프레임워크 기반의 rules-in-form + rules-in-use 통합 측정
 
 ---
 
@@ -294,11 +292,11 @@ AGLI v2는 법률 존재(rules-in-form) + 실제 작동 수준(rules-in-use)을 
 
 ---
 
-## 5. 기존 INST 대비 AGLI 변화 분석
+## 5. 스케일별 점수 비교 분석
 
-### 점수 변화 비교
+### 0-2 스케일 vs. 0-4 스케일 비교
 
-| 대통령 | INST (0-2, /8) | AGLI (0-4, /16) | 핵심 변화 |
+| 대통령 | 0-2 스케일 (/8) | AGLI 0-4 스케일 (/16) | 핵심 변화 |
 |--------|---------------|-----------------|-----------|
 | 노무현 | 4 | 6 | D1: 2->3 (제도 설계자 인정), D4: 1->2 (EGDI 5위 반영) |
 | 이명박 | 4 | 6 | D4: 1->3 (EGDI 세계 1위 2회 반영) |
@@ -309,7 +307,7 @@ AGLI v2는 법률 존재(rules-in-form) + 실제 작동 수준(rules-in-use)을 
 
 ### 변별력 개선
 
-| 차원 | INST (0-2) 변별력 | AGLI (0-4) 변별력 |
+| 차원 | 0-2 스케일 변별력 | AGLI 0-4 스케일 변별력 |
 |------|-------------------|-------------------|
 | D1 정책 피드백 | 전원 2점 (변별력 0) | 1-3점 분포 (range=2) |
 | D2 정책 실험 | 0 또는 2 (2개 수준) | 0, 1, 3 (3개 수준) |
@@ -321,8 +319,8 @@ AGLI v2는 법률 존재(rules-in-form) + 실제 작동 수준(rules-in-use)을 
 ## 6. 방법론적 주석
 
 ### Ostrom IAD 적용 방식
-1. **Rules-in-form**: 각 차원의 법률 존재 여부 확인 (기존 INST와 동일)
-2. **Rules-in-use**: 법률의 실제 작동 수준을 운영 데이터로 평가 (AGLI에서 추가)
+1. **Rules-in-form**: 각 차원의 법률 존재 여부 확인
+2. **Rules-in-use**: 법률의 실제 작동 수준을 운영 데이터로 평가
 3. **Gap 분석**: form-use 괴리가 클수록 낮은 점수 부여 (예: 박근혜 D1 — 법 존재하나 거버넌스 붕괴)
 
 ### 한계
