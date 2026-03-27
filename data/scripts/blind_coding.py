@@ -481,8 +481,8 @@ def extract_json(text: str) -> Any:
     except json.JSONDecodeError:
         pass
 
-    # Try finding first { or [ and matching
-    for start_char, end_char in [('{', '}'), ('[', ']')]:
+    # Try finding first [ or { and matching (prefer arrays for classification responses)
+    for start_char, end_char in [('[', ']'), ('{', '}')]:
         start = text.find(start_char)
         if start == -1:
             continue
