@@ -38,13 +38,26 @@ VERIFIED = DATA_DIR / "verified"
 # BLIND MAPPING
 # ═══════════════════════════════════════════════════════════
 
+# Level 2 블라인딩: 대통령명 + 정당명 + 연도 일반화 + 고유사건명 추상화 (M14 해결)
 BLIND_MAP = {
+    # 대통령명/정부명
     "노무현": "Alpha", "노무현 정부": "Alpha 정부",
     "이명박": "Beta", "이명박 정부": "Beta 정부",
     "박근혜": "Gamma", "박근혜 정부": "Gamma 정부",
     "문재인": "Delta", "문재인 정부": "Delta 정부",
     "윤석열": "Epsilon", "윤석열 정부": "Epsilon 정부",
     "이재명": "Zeta", "이재명 정부": "Zeta 정부",
+    # 정당명
+    "더불어민주당": "여당A", "민주당": "여당A", "열린우리당": "여당A",
+    "국민의힘": "여당B", "새누리당": "여당B", "한나라당": "여당B",
+    "자유한국당": "여당B",
+    # 고유 위기명 → 일반화
+    "세월호": "여객선 침몰 사고", "메르스": "감염병 확산", "MERS": "감염병 확산",
+    "코로나19": "감염병 대유행", "코로나": "감염병 대유행", "COVID-19": "감염병 대유행",
+    "이태원": "대규모 압사 사고", "오송": "지하차도 침수 사고",
+    "잼버리": "국제행사 운영 실패",
+    "천안함": "해군 함정 침몰", "연평도": "포격 도발",
+    "카드대란": "신용카드 부실 위기",
 }
 
 GOV_CASES = {
@@ -74,7 +87,7 @@ def call_openai(prompt: str) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
-            "temperature": 0.3,
+            "temperature": 0.2,
             "max_completion_tokens": 4096,
             "response_format": {"type": "json_object"},
         },
@@ -99,7 +112,7 @@ def call_claude(prompt: str) -> str:
             "max_tokens": 4096,
             "system": SYSTEM_PROMPT,
             "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.3,
+            "temperature": 0.2,
         },
         timeout=300,
     )
@@ -120,7 +133,7 @@ def call_grok(prompt: str) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
-            "temperature": 0.3,
+            "temperature": 0.2,
             "max_completion_tokens": 4096,
         },
         timeout=300,
@@ -141,8 +154,8 @@ def call_clova(prompt: str) -> str:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": prompt},
             ],
-            "temperature": 0.3,
-            "thinking": {"type": "medium"},
+            "temperature": 0.2,
+            "thinking": {"type": "enabled"},
         },
         timeout=300,
     )
@@ -162,7 +175,7 @@ def call_gemini(prompt: str) -> str:
         json={
             "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
             "contents": [{"parts": [{"text": prompt}]}],
-            "generationConfig": {"temperature": 0.3, "maxOutputTokens": 4096},
+            "generationConfig": {"temperature": 0.2, "maxOutputTokens": 4096},
         },
         timeout=300,
     )
@@ -195,9 +208,14 @@ def load_timelines() -> str:
 
 
 def blind_text(text: str) -> str:
+    """Level 2 블라인딩: 이름 치환 + 연도 일반화 (M14 해결)."""
     result = text
     for orig, blind in sorted(BLIND_MAP.items(), key=lambda x: -len(x[0])):
         result = result.replace(orig, blind)
+    # 연도 일반화: 4자리 연도 → "Y년" (임기 추론 방지)
+    result = re.sub(r'(19|20)\d{2}년', 'Y년', result)
+    result = re.sub(r'(19|20)\d{2}\.\d{1,2}', 'Y.M', result)
+    result = re.sub(r'(19|20)\d{2}', 'YYYY', result)
     return result
 
 
@@ -291,6 +309,47 @@ def parse_scores(raw: str) -> Dict[str, Any]:
         print(f"  ⚠ JSON 파싱 실패: {s[:200]}")
         return {"D1": {"score": -1}, "D2": {"score": -1}, "D3": {"score": -1}, "composite": -1}
     return data
+
+
+# ═══════════════════════════════════════════════════════════
+# IDENTIFICATION TEST (H2 해결: 블라인딩 실효성 검증)
+# ═══════════════════════════════════════════════════════════
+
+def run_identification_test(blinded_cases: Dict[int, str], model_keys: List[str]) -> Dict:
+    """블라인드 사례를 LLM에게 제시하고, 어느 정부인지 추측하게 하여 블라인딩 실효성 검증."""
+    labels = sorted(set(gov for gov, cases in GOV_CASES.items() for _ in cases))
+    sample_texts = []
+    for gov_label in labels:
+        case_nums = GOV_CASES.get(gov_label, [])
+        for cn in case_nums[:1]:  # 정부당 1건만 사용
+            if cn in blinded_cases:
+                sample_texts.append(f"[{gov_label}] {blinded_cases[cn][:300]}")
+
+    prompt = f"""아래는 블라인드 처리된 위기 사례입니다. 각 정부 라벨이 실제로 어느 나라의 어떤 시기 정부인지 추측하십시오.
+모르는 경우 "식별 불가"로 답하십시오.
+
+{chr(10).join(sample_texts)}
+
+반드시 아래 JSON 형식으로만 응답하십시오.
+{{
+  {', '.join(f'"{l}": {{"guess": "추측", "confidence": 0.0}}' for l in labels)}
+}}"""
+
+    results = {}
+    for mkey in model_keys:
+        model_name, caller = MODEL_CALLERS[mkey]
+        try:
+            response = caller(prompt)
+            data = json.loads(re.search(r"\{.*\}", response, re.DOTALL).group(0))
+            results[mkey] = data
+            correct = sum(1 for k, v in data.items()
+                         if any(name in str(v.get("guess", ""))
+                                for name in ["노무현", "이명박", "박근혜", "문재인", "윤석열", "이재명"]))
+            print(f"  식별 테스트 [{model_name}]: {correct}/{len(labels)} 정부 식별 (chance=1)")
+        except Exception as e:
+            print(f"  식별 테스트 [{model_name}] 실패: {e}")
+            results[mkey] = {"error": str(e)}
+    return results
 
 
 # ═══════════════════════════════════════════════════════════

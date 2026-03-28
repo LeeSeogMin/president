@@ -1,0 +1,14 @@
+{
+  "panel1_acw": {
+    "gpt": {},
+    "claude": {},
+    "grok": {},
+    "clova": {}
+  },
+  "panel1_inst": {
+    "gpt": {},
+    "claude": {},
+    "grok": {},
+    "clova": {}
+  }
+}
