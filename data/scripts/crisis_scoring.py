@@ -438,7 +438,6 @@ def save_raw_results(all_results: Dict, case_avg: Dict, gov_avg: Dict):
     output = RAW_DEPRECATED / "crisis_scoring_results.md"
 
     lines = ["# Crisis Response Scoring: 원시 결과\n"]
-    lines.append(f"> 작성일: 2026-03-28\n")
     lines.append(f"> 모델: {', '.join(MODEL_CALLERS[k][0] for k in all_results.keys())}\n\n")
 
     # Model × Case detail
@@ -496,7 +495,6 @@ def save_final_score(gov_avg: Dict):
     output = VERIFIED / "crisis_response_score.md"
     lines = [
         "# Crisis Response Score (위기 대응 적절성 점수)\n",
-        "> 작성일: 2026-03-28",
         "> 방법: 18개 위기 사례 × 5 AI 모델 블라인드 채점 (D1 인지·결정 + D2 적절성 + D3 집행, 각 0-4)",
         "> 최종 점수: 3차원 합계 / 3 → 사례별 모델 평균 → 정부별 사례 평균",
         "> 스케일: 0-4 (높을수록 좋음)\n",
