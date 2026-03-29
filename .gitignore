@@ -24,16 +24,11 @@ Thumbs.db
 # Claude Code
 .claude/
 
-# Paper drafts (논문 원고 — 비공개)
+# Paper drafts
 paper/
 
-# Data collection scripts (API 키 의존, 수집용)
 data/scripts/ai_scoring_v2.py
 data/scripts/multi_round_scoring.py
-
-# Internal project management
 data/PROJECT_SUMMARY.md
 data/FINAL_STATUS.md
-
-# Deprecated data
 data/raw_deprecated/
