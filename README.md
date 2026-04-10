@@ -8,6 +8,8 @@
 
 노무현~이재명 정부(6개 행정부)의 적응적 거버넌스 역량을 다중 AI 스코어링(5모델 × 3라운드)으로 비교 평가한다. 후대 정부가 법·제도 누적으로 유리해지는 **축적 편향(accumulation bias)**을 통제하기 위해 5개 독립 지표를 설계하였다.
 
+**방법론 상세**: [method.md](method.md) 참조 (5개 지표 조작적 정의, 변경 이력)
+
 ## 방법론
 
 ### 5개 독립 지표
@@ -55,7 +57,8 @@ president/
     │   ├── blind_coding.py           # T/I/D/E 블라인드 검증
     │   ├── blind_validation_report.py # 블라인드 검증 보고서 생성
     │   ├── crisis_scoring.py         # CRS 위기 대응 채점
-    │   └── action_evaluation.py      # I/D 행위 영향 평가
+    │   ├── action_evaluation.py      # I/D 행위 영향 평가
+    │   └── tables/                   # 스크립트 실행 후 생성 (.gitignore 제외)
     │
     ├── raw_downloads/        # 외부 원시 데이터
     │   ├── wgi_full_dataset_2025.xlsx   # World Bank WGI (Git LFS)
@@ -86,10 +89,32 @@ president/
 
 ### 1. 환경 설정
 
+**시스템 요구사항**:
+- Python 3.10 이상
+- Git + Git LFS (대용량 파일 관리)
+- 인터넷 연결 (5개 AI API 호출)
+
+**예상 소요 시간**: 전체 스크립트 실행 약 2-4시간 (API 응답 속도에 따라 변동)
+
+#### 설치 단계
+
 ```bash
+# Git LFS 설치 (macOS)
+brew install git-lfs
+git lfs install
+
+# Git LFS 설치 (Ubuntu/Debian)
+sudo apt install git-lfs
+git lfs install
+
+# GitHub에서 복제
 git clone https://github.com/LeeSeogMin/adaptive-governance.git
 cd adaptive-governance
 
+# Git LFS 파일 확인 (wgi_full_dataset_2025.xlsx, 9.9MB)
+git lfs ls-files
+
+# Python 가상 환경 생성 및 패키지 설치
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
@@ -112,6 +137,11 @@ cp .env.example .env
 - NAVER Cloud (HyperCLOVA HCX-007)
 
 ### 3. 스크립트 실행 순서
+
+**⚠️ 선행 요구사항**: 다음 파일들은 연구자가 수동으로 작성한 **필수 입력 파일**로, 스크립트 실행 전 반드시 존재해야 한다:
+- `data/verified/tide_attribution.md` — T/I/D/E 귀인 코딩 (스크립트 3, 6 입력)
+- `data/gov_factsheets.md` — 6개 정부 팩트시트 (스크립트 1 입력)
+- `data/raw_downloads/crisis_timelines.md` — 18개 위기 타임라인 (스크립트 5 입력)
 
 모든 스크립트는 `data/scripts/` 디렉토리에서 실행한다.
 
@@ -144,7 +174,20 @@ python multi_round_scoring.py --aggregate-only # 집계만 (API 호출 없음)
 
 ### 4. `data/verified/` 디렉토리
 
-이 디렉토리의 파일들은 스크립트 실행 결과를 연구자가 검토·검증하여 정리한 **레퍼런스 결과**이다. 스크립트를 재실행하면 AI 모델의 비결정적 특성상 수치가 소폭 변동할 수 있으나, 전체 순위 패턴은 안정적으로 재현된다.
+이 디렉토리는 두 가지 유형의 파일을 포함한다:
+
+#### (1) 수동 작성 입력 파일 (GitHub에 포함, 재현에 필수)
+
+- **`tide_attribution.md`** — T/I/D/E 귀인 코딩 (연구자가 수동으로 작성, `blind_coding.py`와 `action_evaluation.py`의 입력)
+- **`laws/`** — 법률 원문 6건 (국가법령정보센터에서 수집)
+- **기타 제도적 스코어링 참조 파일** — `lowi_classification.md`, `tide_weighted.md` 등
+
+#### (2) 재현 가능한 출력 파일 (.gitignore 제외, 스크립트 실행 후 생성)
+
+- **`blind_validation_results.md`** — `blind_validation_report.py` 출력
+- **`crisis_response_score.md`** — `crisis_scoring.py` 출력
+
+스크립트를 재실행하면 AI 모델의 비결정적 특성상 수치가 소폭 변동할 수 있으나, 전체 순위 패턴은 안정적으로 재현된다.
 
 ## 데이터 출처
 
