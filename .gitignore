@@ -25,6 +25,7 @@ Thumbs.db
 
 # Paper drafts (not part of reproducibility package)
 paper/
+paper_a/
 
 # Deprecated data
 data/raw_deprecated/
