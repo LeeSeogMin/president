@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-04-11T00:44:37.491314",
+  "D_coding_symmetry": {
+    "third_order_actions": [
+      "윤석열-G1 비상계엄(I-3)",
+      "윤석열-G2 탄핵·국정공백(I-3)"
+    ],
+    "other_candidates": "없음 — Hall 3차수에 해당하는 행위는 비상계엄 외 발견되지 않음",
+    "moon_negative_candidate": "소득주도성장 수정 → D(1차수), 가중합 영향 -1, 순위 영향 없음"
+  },
+  "E_crs_criteria": {
+    "inclusion_criteria": [
+      "사망자 10명 이상 또는 대규모 인명 위험",
+      "경제 피해 GDP 1% 이상",
+      "헌정 질서 영향",
+      "국제적 파급"
+    ],
+    "total_cases": 15,
+    "endogeneity_response": "포함 기준은 사건 규모로 사전 정의, 대응의 질이 아님"
+  },
+  "F_heterogeneity": {
+    "coding_units": {
+      "노무현": 12,
+      "이명박": 100,
+      "박근혜": 140,
+      "문재인": 100,
+      "윤석열": 120
+    },
+    "rank_change_on_normalization": false,
+    "conclusion": "노무현 제외 또는 정규화해도 문재인 1위·윤석열 최하위 불변"
+  }
+}

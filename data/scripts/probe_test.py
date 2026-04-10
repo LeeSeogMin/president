@@ -24,7 +24,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 load_dotenv(PROJECT_ROOT / ".env")
 
 DATA_DIR = PROJECT_ROOT / "data"
-OUTPUT_DIR = PROJECT_ROOT / "paper_a"
+OUTPUT_DIR = PROJECT_ROOT / "data" / "validation"
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 # ═══════════════════════════════════════════════════════════

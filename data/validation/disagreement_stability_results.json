@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-04-11T00:42:57.390392",
+  "B_disagreement": {
+    "acw_total_items": 110,
+    "acw_sd_threshold_90pct": 0.7999999999999999,
+    "high_disagreement_items": 14,
+    "clova_as_cause_pct": 35.714285714285715,
+    "gov_avg_sd": {
+      "노무현": 0.3559485301944847,
+      "이명박": 0.4305474685568706,
+      "박근혜": 0.5395713258991168,
+      "문재인": 0.4344729148472593,
+      "윤석열": 0.39422888275119755
+    }
+  },
+  "C_round_stability": {
+    "rounds_available": [
+      2,
+      3
+    ]
+  }
+}
